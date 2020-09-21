@@ -7,13 +7,7 @@ import java.io.FileWriter;
 public class AnalyticsCounter {
 	
 	
-	//Supression déclaration des variables pour les symptômes,
-	//Nous ne nous en serviron pas.
-	//private static int headacheCount = 0;	// initialize to 0
-	//private static int rashCount = 0;		// initialize to 0
-	//private static int pupilCount = 0;		// initialize to 0
-	
-	public static void main(String args[]) throws Exception {
+		public static void main(String args[]) throws Exception {
 		// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));
 		String line = reader.readLine();
