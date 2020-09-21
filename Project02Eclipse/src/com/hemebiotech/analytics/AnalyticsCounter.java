@@ -3,10 +3,15 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class AnalyticsCounter {
 	
-	
+		
+		//- Importation des bibliothèques necessaires "java.util.Map, java.util.TreeMap"
+		private static Map<String,Integer> counter = new TreeMap<>(); //-	Création d’un nouvel objet de type TreeMap nomé "counter"
+	 	
 		public static void main(String args[]) throws Exception {
 		// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));
