@@ -20,19 +20,19 @@ public class AnalyticsCounter {
 		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));//-Rectification chemin d'accès au fichier-l'appli ne se lance pas.
 		String line = reader.readLine(); // Lecture ligne par ligne 
 
-<<<<<<< HEAD
+
 		// int i = 0;	// set i to 0   ----commentaire inutile--- comme on utilise une boucle while, je suprime cette ligne.
 		int headCount = 0;	// counts headaches --- supression de cette initialisation, les symptomes seront lus automatiquement dans le fichier (symptoms.txt)
 		while (line != null) {
 			i++;	// increment i 											  // cette ligne sera supprimée
-=======
+
 		int i = 0;	// set i to 0 ---Aucun besoin de commentaires pour savoir que le i est initialisé à 0----
 		
 		//
 		int headCount = 0;	// counts headaches ////commentaire inutile, initialisation variable headCount.....//////
 		while (line != null) {
 			i++;	// increment i  /////On sait que i est incrémenté//// commentaire inutile.
->>>>>>> modif_comment
+
 			System.out.println("symptom from file: " + line);
 			if (line.equals("headache")) { 								      // Cette ligne sera suprimée
 				headCount++; 												  // Cette ligne sera suprimée
