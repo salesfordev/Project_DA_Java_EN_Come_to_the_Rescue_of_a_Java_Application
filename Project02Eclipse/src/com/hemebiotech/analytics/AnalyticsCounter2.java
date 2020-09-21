@@ -3,24 +3,25 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Map;			//- Importation des bibliothèques necessaires : "java.util.Map" - java.util.TreeMap"
+import java.util.Map;			//- Import of the necessary libraries: "java.util.Map" - java.util.TreeMap".
 import java.util.Map.Entry;
 import java.util.TreeMap;		
 
 public class AnalyticsCounter2 {
 	
-	//-Création d’un nouvel objet de type TreeMap nomé "counter"
+	//-Creation of a new TreeMap type object named "counter".
 	private static Map<String,Integer> counter = new TreeMap<>();
 	
 	public static void main(String args[]) throws Exception {
+		
 		// first get input
 		
-		// Création d'un objet reader(BufferedReader) / Mise en mémoire Tampon du fichier symptoms.txt
-		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt")); //-Rectification chemin d'accès au fichier-l'appli ne se lance pas.
+		// Creating a reader object (BufferedReader) / Buffering the symptoms.txt file
+		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt")); //-Correction of the path to the file-the application did not launch.
 		
-		String line = reader.readLine(); // Lecture ligne par ligne
+		String line = reader.readLine(); // Reading line by line
 
-		// Boucle while -lecture des symptômes / stockage des valeurs en mémoire.
+		// Loop while - reading symptoms / storing values in memory.
 		while (line != null) {
 			System.out.println("symptom from file: " + line);
 			Integer count = counter.get(line);
