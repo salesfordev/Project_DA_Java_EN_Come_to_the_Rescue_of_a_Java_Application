@@ -10,14 +10,14 @@ import java.util.TreeMap;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	@Override
-	public Map<String, Integer> readSymptomData() throws IOException {
+	public Map<String, Integer> readSymptomData(String path) throws IOException {
 		
 		Map<String, Integer> counter = new TreeMap<>();
 		
 		// first get input
 		
 				// Creating a reader object (BufferedReader) / Buffering the symptoms.txt file
-				BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt")); //-Correction of the path to the file-the application did not launch.
+				BufferedReader reader = new BufferedReader (new FileReader(path)); //-Correction of the path to the file-the application did not launch.
 				
 				String line = reader.readLine(); // Reading line by line
 

@@ -11,7 +11,7 @@ public class AnalyticsCounter2 {
 		
 		ISymptomReader reader = new ReadSymptomDataFromFile(); 
 		ISymptomWriter writer = new WriteSymptomDataToFile();
-		Map<String, Integer> symptoms = reader.readSymptomData();// Lecture des symptome depuis le fichier.
+		Map<String, Integer> symptoms = reader.readSymptomData("Project02Eclipse/symptoms.txt");// Lecture des symptome depuis le fichier.
 		writer.writeSymptoms(symptoms);// Ecriture des symptômes dans le fichier résult.out.
 		
 		

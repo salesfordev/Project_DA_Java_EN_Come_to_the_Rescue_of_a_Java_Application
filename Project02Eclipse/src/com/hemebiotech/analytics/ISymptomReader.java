@@ -6,6 +6,6 @@ import java.util.Map;
 
 public interface ISymptomReader {
 	
-	Map<String,Integer> readSymptomData() throws IOException;
+	Map<String,Integer> readSymptomData(String path) throws IOException;
 	
 }
