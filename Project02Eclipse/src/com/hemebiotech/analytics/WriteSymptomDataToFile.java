@@ -7,12 +7,16 @@ import java.util.Map.Entry;
 
 public class WriteSymptomDataToFile implements ISymptomWriter {
 
+	// generate output
+	/**
+	 * Cette méthode écrit les symptomes dans un fichier
+	 */
 	@Override
 	public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {
-		// next generate output
+		
 				FileWriter writer = new FileWriter ("result.out");
 				for(Entry<String, Integer> count: symptoms.entrySet()) {
-				writer.write( count.getKey() +" = "+ count.getValue() + "\n");
+				writer.write( count.getKey() +"="+ count.getValue() + "\n");
 					
 				}
 				writer.close();

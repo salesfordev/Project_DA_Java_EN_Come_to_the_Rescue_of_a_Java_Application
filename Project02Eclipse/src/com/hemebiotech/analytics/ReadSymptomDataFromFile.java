@@ -3,16 +3,19 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	@Override
-	public Map<String, Integer> readSymptomData(String path) throws IOException {
+	public List<String> readSymptomData(String path) throws IOException {
 		
-		Map<String, Integer> counter = new TreeMap<>();
+		//Map<String, Integer> counter = new TreeMap<>();
+		List<String> symptoms = new ArrayList<>();
 		
 		// first get input
 		
@@ -24,21 +27,16 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				// Loop while - reading symptoms / storing values in memory.
 				while (line != null) {
 					System.out.println("symptom from file: " + line);
-					Integer count = counter.get(line);
-					if(count==null) {
-						counter.put(line, 1);
-					}else {
-						Integer newCount = counter.get(line)+1;
-						counter.put(line, newCount);
-					}
-
+					symptoms.add(line);
+					
 					// get another symptom
 					line = reader.readLine();	
 				}
 				
 				reader.close();
+				return symptoms;
 				
-				return counter;
+				
 	}
 
 	
