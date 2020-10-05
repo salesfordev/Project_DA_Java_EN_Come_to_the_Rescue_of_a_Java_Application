@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface ISymptomReader {
 	/**
-	 * Lis un fichier et retourne une liste de symptomes
+	 * Reads a file and returns a list of symptoms
 	 * 
-	 * @param path Le chemin vers le fichier
-	 * @return une liste de symptomes
+	 * @param path, The path to the file
+	 * @return a list of symptoms
 	 * @throws IOException
 	 */
 	List<String> readSymptomData(String path) throws IOException;

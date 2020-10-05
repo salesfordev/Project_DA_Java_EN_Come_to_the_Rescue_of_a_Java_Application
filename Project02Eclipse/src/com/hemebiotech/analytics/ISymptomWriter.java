@@ -5,9 +5,9 @@ import java.util.Map;
 
 public interface ISymptomWriter {
 	/**
-	 * Ecriture des symptomes 
+	 * Symptom Writing 
 	 * 
-	 * @param symptoms Correspond au décompte des symptomes
+	 * @param symptoms Corresponds to the symptom count
 	 * @throws IOException 
 	 */
 	void writeSymptoms (Map<String, Integer> symptoms) throws IOException;

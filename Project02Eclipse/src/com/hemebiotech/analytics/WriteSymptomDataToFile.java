@@ -9,7 +9,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 
 	// generate output
 	/**
-	 * Cette méthode écrit les symptomes dans un fichier
+	 * This method writes the symptoms in a file
 	 */
 	@Override
 	public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {

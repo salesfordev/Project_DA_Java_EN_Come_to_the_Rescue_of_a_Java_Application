@@ -3,7 +3,7 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 /**
- * Cette classe est la classe principale qui appelle les différentes méthodes.
+ * This class is the main class that calls the different methods.
  * @author SALAM
  *
  */

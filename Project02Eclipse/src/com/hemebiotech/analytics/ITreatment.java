@@ -6,11 +6,12 @@ import java.util.Map;
 public interface ITreatment {
 	
 	/**
-	 * cette méthode compte l'occurence des symptomes
-	 * @param symptoms Une liste de symptomes que l'on a lu.
-	 * @return Une Map qui correspond au décompte de chaque symptome 
+	 * this method counts the occurrence of symptoms
+	 * @param symptoms A list of symptoms that have been read
+	 * @return A Map that corresponds to the count of each symptom 
 	 */
 	Map<String, Integer> count(List<String> symptoms);
 	
 
 }
+ 
