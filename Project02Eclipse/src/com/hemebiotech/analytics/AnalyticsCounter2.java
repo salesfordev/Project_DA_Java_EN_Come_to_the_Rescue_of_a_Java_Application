@@ -12,7 +12,11 @@ public class AnalyticsCounter2 {
 	
 	
 	
-	
+	/**
+	 * 
+	 * @param args
+	 * @throws Exception une exeption peut etre levé s'il y a une erreur de lecture ou d'écriture dans le fichier.
+	 */
 	public static void main(String args[]) throws Exception {
 		
 		ISymptomReader reader = new ReadSymptomDataFromFile(); 
