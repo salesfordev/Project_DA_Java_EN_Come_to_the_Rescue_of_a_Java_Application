@@ -15,7 +15,7 @@ public class AnalyticsCounter2 {
 	/**
 	 * 
 	 * @param args
-	 * @throws Exception une exeption peut etre levé s'il y a une erreur de lecture ou d'écriture dans le fichier.
+	 * @throws Exception - An exception can be raised if there is a read or write error in the file.
 	 */
 	public static void main(String args[]) throws Exception {
 		
@@ -24,9 +24,9 @@ public class AnalyticsCounter2 {
 		ISymptomWriter writer = new WriteSymptomDataToFile();
 		
 		
-		List<String> symptoms = reader.readSymptomData("Project02Eclipse/symptoms.txt");// Lecture des symptome depuis le fichier.
+		List<String> symptoms = reader.readSymptomData("Project02Eclipse/symptoms.txt");	// Reading the symptoms from the file.
 		Map<String, Integer> counters = treatment.count(symptoms);
-		writer.writeSymptoms(counters);// Ecriture des symptômes dans le fichier résult.out.
+		writer.writeSymptoms(counters);		// Write the symptoms in the result.out file.
 		
 		
 		

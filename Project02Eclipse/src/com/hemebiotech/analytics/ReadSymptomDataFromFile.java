@@ -24,29 +24,29 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * @throws IOException
 	 */
 	@Override
-	public List<String> readSymptomData(String path) throws IOException {  //une exeption peut etre levé s'il y a une erreur de lecture ou d'écriture dans le fichier.
+	public List<String> readSymptomData(String path) throws IOException {  // An exception can be raised if there is a read or write error in the file.
 		
 		
-		List<String> symptoms = new ArrayList<>(); //Création d'une liste pour stocker les symptômes.
+		List<String> symptoms = new ArrayList<>();		// Creation of a list to store symptoms.
 		
-		// first get input
 		
-				// Creating a reader object (BufferedReader) / Buffering the symptoms.txt file
-				BufferedReader reader = new BufferedReader (new FileReader(path)); //-Correction of the path to the file-the application did not launch.
+		
+				
+				BufferedReader reader = new BufferedReader (new FileReader(path));		// Creating a reader object (BufferedReader) / Buffering the symptoms.txt file
 				
 				String line = reader.readLine(); // Reading line by line
 
-				// Loop while - reading symptoms / storing values in memory.
-				while (line != null) {
+				
+				while (line != null) {		// Loop while - reading symptoms / storing values in memory.
 					System.out.println("symptom from file: " + line);
 					symptoms.add(line);
 					
-					// get another symptom
-					line = reader.readLine();	
+					
+					line = reader.readLine();		// Get another symptom	
 				}
 				
-				reader.close(); // Fermeture de la ressource reader
-				return symptoms; // retourne la liste des symptomes
+				reader.close();			// Closing the reader resource
+				return symptoms;		// Returns the list of symptoms
 				
 				
 	}
