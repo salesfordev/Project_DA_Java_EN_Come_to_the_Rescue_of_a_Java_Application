@@ -11,7 +11,7 @@ public interface ISymptomReader {
 	 * 
 	 * @param path, The path to the file
 	 * @return a list of symptoms
-	 * @throws IOException
+	 * @throws IOException Input and Output Exexptions
 	 */
 	List<String> readSymptomData(String path) throws IOException;
 	

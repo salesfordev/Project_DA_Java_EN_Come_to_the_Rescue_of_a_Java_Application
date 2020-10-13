@@ -22,7 +22,7 @@ public class Treatment implements ITreatment {
 			if (currentCount != null) { 						// If the counter exists it is incremented
 				currentCount++;
 				counter.put(symptom, currentCount);
-			} else {											// If the counter does not exist, we add the value 1 in the Map
+			} else {											// ITrf the counter does not exist, we add the value 1 in the Map
 				counter.put(symptom, 1);
 			}
 			

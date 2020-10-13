@@ -21,7 +21,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * 
 	 * @param path, The path to the file
 	 * @return a list of symptoms
-	 * @throws IOException
+	 * @throws IOException Input and Output Exeptions
 	 */
 	@Override
 	public List<String> readSymptomData(String path) throws IOException {  // An exception can be raised if there is a read or write error in the file.
@@ -38,13 +38,14 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 				
 				while (line != null) {		// Loop while - reading symptoms / storing values in memory.
-					System.out.println("symptom from file: " + line);
+					
 					symptoms.add(line);
 					
 					
 					line = reader.readLine();		// Get another symptom	
 				}
-				
+				System.out.println();
+				System.out.println("L'importation de la liste des symptômes a été réalisé avec succés. " );
 				reader.close();			// Closing the reader resource
 				return symptoms;		// Returns the list of symptoms
 				

@@ -13,8 +13,8 @@ public class AnalyticsCounter2 {
 	
 	
 	/**
-	 * 
-	 * @param args
+	 * The main method
+	 * @param args List of arguments
 	 * @throws Exception - An exception can be raised if there is a read or write error in the file.
 	 */
 	public static void main(String args[]) throws Exception {
