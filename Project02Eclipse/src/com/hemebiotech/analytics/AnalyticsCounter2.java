@@ -25,8 +25,8 @@ public class AnalyticsCounter2 {
 		
 		
 		List<String> symptoms = reader.readSymptomData("Project02Eclipse/symptoms.txt");	// Reading the symptoms from the file.
-		Map<String, Integer> counters = treatment.count(symptoms);
-		writer.writeSymptoms(counters);		// Write the symptoms in the result.out file.
+		Map<String, Integer> counters = treatment.count(symptoms);	// does the processing: sorting in alphabetical order, counting the number of occurrences.
+		writer.writeSymptoms(counters);		// Write the symptoms and their occurrence in the result.out file.
 		
 		
 		
