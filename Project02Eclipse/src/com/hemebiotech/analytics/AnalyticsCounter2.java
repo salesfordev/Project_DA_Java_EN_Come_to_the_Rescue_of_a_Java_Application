@@ -23,12 +23,18 @@ public class AnalyticsCounter2 {
 		ITreatment treatment = new Treatment();
 		ISymptomWriter writer = new WriteSymptomDataToFile();
 		
-		
+		try {
 		List<String> symptoms = reader.readSymptomData("Project02Eclipse/symptoms.txt");	// Reading the symptoms from the file.
-		Map<String, Integer> counters = treatment.count(symptoms);	// does the processing: sorting in alphabetical order, counting the number of occurrences.
-		writer.writeSymptoms(counters);		// Write the symptoms and their occurrence in the result.out file.
+		Map<String, Integer> counters = treatment.count(symptoms);
+		writer.writeSymptoms(counters);		// Write the symptoms in the result.out file.
+		System.out.println("Aucune erreur n'a été rencontrée lors du traitement des données.");
+		System.out.println();
+		System.out.println("###################################################################");
+		}
 		
-		
+		catch (Exception e) {
+			System.out.println("Une erreur est survenue");
+		}
 		
 		
 	}
