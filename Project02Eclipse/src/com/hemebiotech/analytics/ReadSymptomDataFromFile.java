@@ -23,12 +23,12 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 */
 	@Override
 	public List<String> readSymptomData(String path) throws IOException { // An exception can be raised if there is a
-																			// read or write error in the file.
+																		  // read or write error in the file.
 
-		List<String> symptoms = new ArrayList<>(); // Creation of a list to store symptoms.
+		List<String> symptoms = new ArrayList<>(); 
 
 		BufferedReader reader = new BufferedReader(new FileReader(path)); // Creating a reader object (BufferedReader) /
-																			// Buffering the symptoms.txt file
+																		  // Buffering the symptoms.txt file
 
 		String line = reader.readLine(); // Reading line by line
 
@@ -45,7 +45,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		System.out.println();
 		System.out.println("###################################################################");
 		System.out.println();
-		reader.close(); // Closing the reader resource
+		reader.close(); 
 		return symptoms; // Returns the list of symptoms
 
 	}
